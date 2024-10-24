@@ -1,0 +1,71 @@
+:root{
+    --color-black: #006d77;
+    --color-aero: #83c5be;
+    --color-thistle: #ffddd2;
+    --color-white: #fff;
+}
+
+/* Header */
+
+#div_nav_header{
+    width: 100%;
+    height: auto;
+    z-index: 2000;
+  }
+  
+  header{
+    background-color: #006d77;
+  }
+  header #nav_bar{
+    background-color: none !important;
+  }
+  header #nav_bar a{
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 18px;
+  }
+  #div_nav_header #logo_viajes_chile{
+    height: 50px;
+  }
+  #div_nav_header #p_viajes_chile{
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--color-white);
+  }
+  
+  #div_nav_header a{
+    scroll-behavior: smooth;
+  }
+/* Carousel */
+#carouselExampleFade img{
+  height:auto;
+}
+
+#contact{
+  background-color: var(--color-black);
+}
+
+#contact_form,label, h2, hr{
+    color: var(--color-white);
+  }
+  
+  #contact_form #btn_send{
+    background-color: var(--color-aero);
+    color: var(--color-white);
+    width: 100px;
+  }
+/* START FOOTER */
+footer{
+    background-color: black;
+    color: var(--color-white);
+
+}
+footer a:visited{
+    color: inherit;
+
+}
+footer i{
+    padding-left: 10px;
+    font-size: 30px;
+}
+/* END FOOTER  */

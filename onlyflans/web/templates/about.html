@@ -1,0 +1,77 @@
+{# about.html #}
+{% extends 'base.html' %}
+
+{% block content %}
+<section class=" d-flex justify-content-center align-items-center">
+    <div id="whoWeAre" class="w-75 align-items-center container pb-5">
+        <h2 class="container mt-2 text-center">¿Quiénes Somos?</h2>
+        <hr>
+        <div class="container">
+            <div class="row g-4 ">
+                <div class="col-4">
+                    <i class="fa-solid fa-plane text-center w-100 p-2 my-1"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos non laudantium doloremque
+                        nostrum. Doloremque culpa nostrum sit, minima iure nulla quisquam, hic aut saepe illum
+                        earum ea ex corrupti in. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit nesciunt officia, necessitatibus ducimus harum unde. Iure optio dolores,
+                        nesciunt, adipisci repudiandae dignissimos ratione suscipit sint, eos vero distinctio
+                        porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nobis quas
+                        labore ducimus minus, quos molestias quibusdam est odio dolorem saepe ea similique quam
+                        illo soluta consequuntur fuga quo quae!</p>
+                </div>
+                <div class="col-4">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos non laudantium doloremque
+                        nostrum. Doloremque culpa nostrum sit, minima iure nulla quisquam, hic aut saepe illum
+                        earum ea ex corrupti in. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit nesciunt officia, necessitatibus ducimus harum unde. Iure optio dolores,
+                        nesciunt, adipisci repudiandae dignissimos ratione suscipit sint, eos vero distinctio
+                        porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nobis quas
+                        labore ducimus minus, quos molestias quibusdam est odio dolorem saepe ea similique quam
+                        illo soluta consequuntur fuga quo quae!</p>
+                    <i class="fa-solid fa-mountain text-center w-100 p-2 my-1"></i>
+                </div>
+                <div class="col-4">
+                    <i class="fa-solid fa-route text-center w-100 p-2 my-1"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos non laudantium doloremque
+                        nostrum. Doloremque culpa nostrum sit, minima iure nulla quisquam, hic aut saepe illum
+                        earum ea ex corrupti in. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Suscipit nesciunt officia, necessitatibus ducimus harum unde. Iure optio dolores,
+                        nesciunt, adipisci repudiandae dignissimos ratione suscipit sint, eos vero distinctio
+                        porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nobis quas
+                        labore ducimus minus, quos molestias quibusdam est odio dolorem saepe ea similique quam
+                        illo soluta consequuntur fuga quo quae!</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</section>
+<section id="contact" class="d-flex justify-content-center align-items-center">
+    <form id="contact_form" class="w-75 align-items-center container pb-5">
+        <h2 class="container mt-2 text-center">Contacto</h2>
+        <hr>
+        <div class="form-group container">
+            <label for="formName">Nombre</label>
+            <input type="text" class="form-control" id="formName" placeholder="">
+        </div>
+        <div class="form-group container">
+            <label for="formAsunto">Asunto</label>
+            <input type="text" class="form-control" id="formAsunto" placeholder="">
+        </div>
+        <div class="form-group container">
+            <label for="exampleFormControlTextarea1">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="container my-2">
+            <button type="submit" id="btn_send" class="btn"
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Envianos tus dudas o comentarios"
+            >Enviar</button>
+        </div>
+    </form>
+</section>
+{% endblock %}
