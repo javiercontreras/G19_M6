@@ -5,8 +5,7 @@
 <section id="highlight" class=" d-flex justify-content-center align-items-center">
     <div class="w-75 align-items-center container pb-5">
         <h2 class="container mt-2 text-center">Nuestros Deliciosos Productos</h2>
-        <hr>
-        
+        <hr>    
         <div class="row g-4">
             {% for flan in flanes%}
             <div class="col-xl-3 col-md-6 col-sm-12">
@@ -21,42 +20,7 @@
                 </div>
             </div>
             {% endfor %}
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="card mt-3">
-                    {% load static %}
-                    <img class="card-img-top" src="{% static 'img/flan2.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5>$3500</h5>
-                        <p class="card-text">Flan suave y cremoso, con caramelo y fresa fresca.
-El postre perfecto para cualquier ocasión.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="card mt-3">
-                    {% load static %}
-                    <img class="card-img-top" src="{% static 'img/flan3.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5>$3500</h5>
-                        <p class="card-text">Flan suave y cremoso, con caramelo y fresa fresca.
-El postre perfecto para cualquier ocasión.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-12">
-                <div class="card mt-3">
-                    {% load static %}
-                    <img class="card-img-top" src="{% static 'img/flan4.jpg' %}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5>$4000</h5>
-                        <p class="card-text">Flan suave y cremoso, con caramelo y fresa fresca.
-El postre perfecto para cualquier ocasión.</p>
-                    </div>
-                </div>
-            </div>
         </div>
-
     </div>
-    
 </section>
 {% endblock %}

@@ -54,6 +54,17 @@
     color: var(--color-white);
     width: 100px;
   }
+    /* FORM */
+  
+.form-control{
+  color: black;
+}
+
+.form-horizontal p label{
+  color: black !important;
+}
+
+
 /* START FOOTER */
 footer{
     background-color: black;

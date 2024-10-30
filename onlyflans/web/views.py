@@ -6,6 +6,7 @@ from django.http import HttpResponse,HttpResponseForbidden
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from .models import Flan
+from .form import ContactForm
 # Create your views here.
 def indice(request):
     flanes = Flan.objects.filter(is_private=False)
@@ -15,7 +16,8 @@ def acerca(request):
     return render(request,'about.html',{})
 
 def bienvenido(request):
-    return render(request,'welcome.html',{})
+    flanes = Flan.objects.filter(is_private=True)
+    return render(request,'welcome.html',{'flanes':flanes})
 
 def sign_up(request):
     if request.method == 'GET':
@@ -45,3 +47,17 @@ def log_in(request):
         else:
             login(request,user)
             return redirect('/')
+        
+def contacto(request):
+    if request.method == 'GET':
+        return render(request,'contacto.html',{'form':ContactForm})
+    else:
+        try:
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('indice')
+            
+        except ValueError:
+            return render(request, 'contacto.html', {'form': ContactForm,'error': 'Ingresa datos válidos en el Formulario'}) 
+       
