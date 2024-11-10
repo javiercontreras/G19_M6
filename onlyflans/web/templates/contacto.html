@@ -1,10 +1,10 @@
 {# contacto.html #}
 {% extends 'base.html' %}
 {% block content%}
-<h1>Formulario para nuevas tareas</h1>
+<h1>Contacto</h1>
 <form action="/contacto/" method="POST" class="form-horizontal">
 {% csrf_token %}
 {{form.as_p}}
-    <input type="submit" value="Guardar tarea">
+    <input type="submit" value="Enviar">
 </form>
 {% endblock %}

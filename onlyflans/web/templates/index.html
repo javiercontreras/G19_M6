@@ -2,7 +2,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section id="highlight" class=" d-flex justify-content-center align-items-center">
+{%if user.is_authenticated%}
+<section class ="d-flex justify-content-center align-items-center bienvenido" >
+    <h2>Bienvenido {{user.get_username}}!</h2>
+</section>
+{% endif %}
+<section id="highlight" class=" d-flex justify-content-center align-items-center mainSection">
     <div class="w-75 align-items-center container pb-5">
         <h2 class="container mt-2 text-center">Nuestros Deliciosos Productos</h2>
         <hr>    

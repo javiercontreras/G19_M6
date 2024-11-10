@@ -15,6 +15,7 @@ def indice(request):
 def acerca(request):
     return render(request,'about.html',{})
 
+@login_required
 def bienvenido(request):
     flanes = Flan.objects.filter(is_private=True)
     return render(request,'welcome.html',{'flanes':flanes})
@@ -35,7 +36,7 @@ def sign_up(request):
 
 def sign_out(request):
     logout(request)
-    return redirect('home')
+    return redirect('indice')
 
 def log_in(request):
     if request.method == 'GET':
@@ -46,7 +47,7 @@ def log_in(request):
             return render(request, 'login.html', {'form': AuthenticationForm,'error':"El usuario o contraseña son incorrectos"})
         else:
             login(request,user)
-            return redirect('/')
+            return redirect('indice')
         
 def contacto(request):
     if request.method == 'GET':
@@ -60,4 +61,18 @@ def contacto(request):
             
         except ValueError:
             return render(request, 'contacto.html', {'form': ContactForm,'error': 'Ingresa datos válidos en el Formulario'}) 
-       
+
+
+def sign_up(request):
+    if request.method == 'GET':
+        return render(request, 'signup.html',{'form':UserCreationForm})
+    else:
+        if request.POST['password1']==request.POST['password2']:
+            try:
+                user = User.objects.create_user(username=request.POST["username"],password=request.POST["password1"])
+                user.save()
+                login(request,user)
+                return redirect('home')
+            except:
+                return HttpResponse("El usuario ya existe")
+        return HttpResponse("Las contraseñas no coinciden")

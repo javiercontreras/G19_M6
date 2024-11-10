@@ -1,12 +1,17 @@
 :root{
     --color-black: #006d77;
     --color-aero: #83c5be;
-    --color-thistle: #ffddd2;
+    --color-thistle: #e2b3a3;
     --color-white: #fff;
 }
 
+.bienvenido {
+  background-color: gray !important;
+}
 /* Header */
-
+.mainSection{
+  background-color: var(--color-thistle)  !important;
+}
 #div_nav_header{
     width: 100%;
     height: auto;
@@ -14,7 +19,7 @@
   }
   
   header{
-    background-color: #006d77;
+    background-color: var(--color-aero);
   }
   header #nav_bar{
     background-color: none !important;
@@ -24,7 +29,7 @@
     font-weight: bold;
     font-size: 18px;
   }
-  #div_nav_header #logo_viajes_chile{
+  #div_nav_header #only_flan_logo{
     height: 50px;
   }
   #div_nav_header #p_viajes_chile{
@@ -32,13 +37,16 @@
     font-size: 35px;
     color: var(--color-white);
   }
-  
+  .bienvenido{
+    background-color: #83c5be;
+  }
   #div_nav_header a{
     scroll-behavior: smooth;
   }
 /* Carousel */
 #carouselExampleFade img{
-  height:auto;
+  height:500px;
+  width: auto;
 }
 
 #contact{
@@ -67,8 +75,9 @@
 
 /* START FOOTER */
 footer{
-    background-color: black;
+    background-color: var(--color-aero);
     color: var(--color-white);
+    margin-bottom: 0;
 
 }
 footer a:visited{
